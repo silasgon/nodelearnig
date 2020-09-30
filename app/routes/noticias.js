@@ -4,12 +4,12 @@ module.exports = function(application) {
 
         var connection = application.config.dbConnection();
 
-        var NoticiasDAO = new application.app.models.NoticiasDAO(connection);
+        var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
-        NoticiasDAO.getNoticias(function(error, result) {
+        noticiasModel.getNoticias(function(error, result) {
             res.render("noticias/noticias", { noticias: result });
         });
 
     });
 
-};
+}

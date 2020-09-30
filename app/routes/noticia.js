@@ -1,15 +1,15 @@
-const { application } = require("express");
+//const { application } = require("express");
 
 module.exports = function(application) {
 
     application.get('/noticia', function(req, res) {
 
         var connection = application.config.dbConnection();
-        var NoticiasDAO = new application.app.models.NoticiasDAO(connection);
+        var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
-        NoticiasDAO.getNoticia(function(error, result) {
+        noticiasModel.getNoticia(function(error, result) {
             res.render("noticias/noticia", { noticia: result });
         });
 
     });
-};
+}
