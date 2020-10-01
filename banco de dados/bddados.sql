@@ -26,9 +26,9 @@ CREATE TABLE IF NOT EXISTS `noticias` (
   `autor` varchar(30) COLLATE utf32_unicode_ci DEFAULT NULL,
   `data_noticia` date,
   PRIMARY KEY (`id_noticia`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
 
--- Copiando dados para a tabela portal_noticias.noticias: ~8 rows (aproximadamente)
+-- Copiando dados para a tabela portal_noticias.noticias: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `noticias` DISABLE KEYS */;
 INSERT INTO `noticias` (`id_noticia`, `titulo`, `noticia`, `data_criacao`, `resumo`, `autor`, `data_noticia`) VALUES
 	(1, 'titulo da noticia', 'conteudo da noticia', '2020-09-23 16:12:15', NULL, NULL, NULL),
@@ -38,7 +38,9 @@ INSERT INTO `noticias` (`id_noticia`, `titulo`, `noticia`, `data_criacao`, `resu
 	(6, 'asdasd', 'asdasd asdas a sas  as dadasdas', '2020-09-30 16:14:03', 'asdasda asadsas', 'asdas ', '2020-09-30'),
 	(7, 'asdasd', 'asdasd asdas a sas  as dadasdas', '2020-09-30 17:37:23', 'asdasda asadsas', 'asdas ', '2020-09-30'),
 	(8, 'Teste 1', 'asdasda', '2020-09-30 18:00:10', 'isto é um teste', 'silas', '2020-12-31'),
-	(9, 'Teste 1', 'Silas esta aprendendo                   ', '2020-09-30 18:05:55', 'isto é um teste', 'Silas', '2020-12-31');
+	(9, 'Teste 1', 'Silas esta aprendendo                   ', '2020-09-30 18:05:55', 'isto é um teste', 'Silas', '2020-12-31'),
+	(10, 'Noticias da quinta', 'No dia de quinta feira começamos com boas notícias, e tarefas a serem cumpridas.', '2020-10-01 10:19:34', 'quinta começou arrochada', 'Silas', '2020-10-01'),
+	(11, 'Tarde de quinta', 'Hoje estarei retirando as maquinas da secretatia', '2020-10-01 16:10:49', 'resumo da tarde de quinta', 'Silas', '2020-10-01');
 /*!40000 ALTER TABLE `noticias` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

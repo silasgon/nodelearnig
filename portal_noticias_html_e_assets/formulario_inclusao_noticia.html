@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
@@ -44,17 +43,49 @@
 
 
 	    <div class="container">
+		
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-danger">
+						<strong>Atenção!</strong>
+						<ul>
+							<li>Título é obrigatório</li>
+							<li>Resumo é obrigatório</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 	    	<div class="row">
 	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor"><%= noticia[0].autor %></span>
-		    			<a href="noticia/1" class="noticia_titulo"><%= noticia[0].titulo %></a>
-		    			<span class="noticia_data"><%= noticia[0].data_noticia %></span>
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				<%= noticia[0].resumo %>
-		    			</p>
-		    		</div>
+	    			<form>
+						<div class="form-group">
+							<label for="titulo">Título:</label>
+							<input type="text" class="form-control" id="titulo" name="titulo">
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Resumo:</label>
+							<input type="text" class="form-control" id="resumo" name="resumo">
+						</div>
+						
+						<div class="form-group">
+							<label for="pwd">Autor:</label>
+							<input type="text" class="form-control" id="autor" name="autor">
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Data:</label>
+							<input type="date" class="form-control" id="data_noticia" name="data_noticia">
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Notícia:</label>
+							<textarea class="form-control" id="noticia" name="noticia"></textarea>
+						</div>
+
+
+						<button type="submit" class="btn btn-default">Cadastrar</button>
+						</form>
 		    	</div>
 	    	</div>
 	    </div>
